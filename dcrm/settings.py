@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(7a82ov=l5+yexilrk7x6-0xni=&qlzp$n*=yt3!2vta=g++go
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,11 +79,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dcrmdatabase',
         'USER': 'root',
-        'PASSWORD': 'pavan@1619',
-        'HOST': 'localhost',
+        'PASSWORD': 'hyder@1619',
+        'HOST': 'db',        # ✅ must match the docker-compose service name
         'PORT': '3306',
     }
 }
+
 
 
 # Password validation

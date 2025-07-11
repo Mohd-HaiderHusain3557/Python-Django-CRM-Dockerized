@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    command:
+      [
+        "./wait-for-it.sh",
+        "db:3306",
+        "--",
+        "python",
+        "manage.py",
+        "runserver",
+        "0.0.0.0:8000",
+      ]
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DEBUG=True
+
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_DATABASE: dcrmdatabase
+      MYSQL_ROOT_PASSWORD: hyder@1619
