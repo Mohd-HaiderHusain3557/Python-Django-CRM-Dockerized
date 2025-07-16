@@ -20,8 +20,7 @@ Follow these steps to set up and run the project on your local machine:
 1. **Clone the Repository**
 
   ```bash
-  git clone https://github.com/PavankumarUppar/Django-CRM.git
-  cd Django-CRM
+  https://github.com/Mohd-HaiderHusain3557/Python-Django-CRM-Dockerized
   ```
    
 2. **Create a Vurtual Environment**
